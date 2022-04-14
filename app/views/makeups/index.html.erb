@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Makeups</h1>
+
+<div id="makeups">
+  <% @makeups.each do |makeup| %>
+    <%= render makeup %>
+    <p>
+      <%= link_to "Show this makeup", makeup %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New makeup", new_makeup_path %>

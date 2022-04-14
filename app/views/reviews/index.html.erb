@@ -1,0 +1,21 @@
+<h1>Reviews#index</h1>
+<table>
+<tr>
+<th>Review details</th>
+<% for review in @reviews %>
+<tr>
+<td><%= review.details %></td>
+<td><% link_to 'Show', makeups_review_path(@makeups, review) %></td>
+<td><% link_to 'Edit', edit_movie_review_path(@makeups, review) %></td>
+<td><%= link_to 'Destory', makeups_review_path(@makeups, review),
+:confirm => 'Are you sure?', :method => :delete %></td>
+</tr>
+< % end %>
+</table>
+<br />
+<%= link_to 'New review', new_movie_review_path(@makeups) %>
+<%= link_to 'Back to Makeup', @makeups %>
+ 
+
+
+<p>Find me in app/views/reviews/index.html.erb</p>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @makeup %>
+
+<div>
+  <%= link_to "Edit this makeup", edit_makeup_path(@makeup) %> |
+  <%= link_to "Back to makeups", makeups_path %>
+
+  <%= button_to "Destroy this makeup", @makeup, method: :delete %>
+</div>
